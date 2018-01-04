@@ -21,7 +21,7 @@ class Application
 
       if @@items.include?(cart_add)
         @@cart << cart_add
-       resp.write "#{cart_add} is one of our items"
+       resp.write "added #{cart_add}"
      else
        resp.write "We don't have that item"
      end

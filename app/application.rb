@@ -24,6 +24,10 @@ class Application
        resp.write "Couldn't find #{cart_add}"
      end
     elsif req.path.match(/cart/)
+
+      if @@cart.is_empty?
+        resp.write "Your cart is empty"
+      else
       @@cart.each do |item|
         resp.write "#{item}\n"
       end

@@ -19,10 +19,9 @@ class Application
 
       if @@items.include?(cart_add)
         @@cart << cart_add
-
        resp.write "#{search_term} is one of our items"
      else
-       resp.write "Couldn't find #{search_term}"
+       resp.write "Couldn't find #{cart_add}"
      end
     elsif req.path.match(/cart/)
       @@cart.each do |item|
